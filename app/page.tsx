@@ -410,14 +410,14 @@ export default function Home() {
               >
                 Si no sabes que regalar
               </h3>
-              <div className="bg-purple-100/90 backdrop-blur-sm p-3 px-5 rounded-xl border-3 border-purple-500 shadow-lg w-full">
-                <p
-                  className="text-base md:text-lg font-black text-purple-800 text-center cursor-pointer hover:text-purple-900 transition-colors"
-                  style={{ fontFamily: "Arial, sans-serif", letterSpacing: "0.5px" }}
-                >
-                  ARI.CARRILLO.
-                </p>
+              
+
+              <div className="inline-flex bg-white px-5 py-2 rounded-full border-2 border-purple-500 shadow-md">
+                <span className="text-sm font-bold tracking-wide text-purple-700">
+                ALIAS: ARI.CARRILLO
+                </span>
               </div>
+
             </div>
           </div>
         </div>
