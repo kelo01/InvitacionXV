@@ -13,7 +13,7 @@ export default function Home() {
     minutes: 0,
     seconds: 0,
   })
-
+  const [showDressCode, setShowDressCode] = useState(false)
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = Date.now()
@@ -48,14 +48,14 @@ export default function Home() {
       setGuestName("")
     }
   }
-
+ 
   const handleLocation = () => {
     window.open("https://maps.app.goo.gl/BxYr4f3LZ9CcuS1Y8", "_blank")
   }
 
-  const handleDressCode = () => {
-    alert("Dress Code: Elegante 👗✨")
-  }
+   const handleDressCode = () => {
+  setShowDressCode(true)
+}
 
   const handleGiftRegistry = () => {
     navigator.clipboard.writeText("ARI.CARRILLO.")
@@ -102,6 +102,45 @@ export default function Home() {
           </div>
         </div>
       )}
+      {showDressCode && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div
+      className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+      onClick={() => setShowDressCode(false)}
+    ></div>
+
+    <div className="relative bg-white rounded-3xl shadow-2xl p-8 max-w-md w-full border-4 border-blue-600">
+      <div className="text-center mb-6">
+        <div className="text-6xl mb-3">👗✨</div>
+        <h3 className="text-3xl font-black text-gray-900 mb-2">
+          Dress Code
+        </h3>
+        <p className="text-gray-600 font-semibold">
+          Colores sugeridos
+        </p>
+      </div>
+
+      <div className="flex justify-center gap-4 mb-6">
+        <div className="w-14 h-14 rounded-full bg-rose-200"></div>
+        <div className="w-14 h-14 rounded-full bg-pink-300"></div>
+        <div className="w-14 h-14 rounded-full bg-amber-200"></div>
+        <div className="w-14 h-14 rounded-full bg-cyan-200"></div>
+        <div className="w-14 h-14 rounded-full bg-lime-200"></div>
+      </div>
+
+      <p className="text-center text-gray-700 font-semibold mb-6">
+        Te sugerimos colores claros y pasteles 🌸
+      </p>
+
+      <button
+        onClick={() => setShowDressCode(false)}
+        className="w-full py-4 bg-blue-600 text-white font-bold rounded-xl"
+      >
+        Entendido
+      </button>
+    </div>
+  </div>
+)}
 
       <div
         className="fixed inset-0 bg-cover bg-center bg-no-repeat opacity-30"
