@@ -453,7 +453,7 @@ export default function Home() {
 
               <div className="inline-flex bg-white px-5 py-2 rounded-full border-2 border-purple-500 shadow-md">
                 <span className="text-sm font-bold tracking-wide text-purple-700">
-                ALIAS: ARI.CARRILLO
+                ALIAS: ARI.CARRILLO.
                 </span>
               </div>
 
